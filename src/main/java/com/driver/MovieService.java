@@ -23,27 +23,27 @@ public class MovieService {
         movieRepository.saveMovieDirectorPair(movie,director);
     }
 
-    public Movie searchMovie(String movie){
+    public Movie findMovie(String movie){
         return movieRepository.findMovie(movie);
     }
 
-    public Director searchDirector(String director){
+    public Director findDirector(String director){
         return movieRepository.findDirector(director);
     }
 
-    public List<String> searchMovieFromDirector(String director){
+    public List<String> findMoviesFromDirector(String director){
         return movieRepository.findMoviesFromDirector(director);
     }
 
-    public List<String> searchAllMovies(){
+    public List<String> findAllMovies(){
         return movieRepository.findAllMovies();
     }
 
-    public void removeDirector(String director){
+    public void deleteDirector(String director){
         movieRepository.deleteDirector(director);
     }
 
-    public void removeAllDirector(){
+    public void deleteAllDirector(){
         movieRepository.deleteAllDirector();
     }
 }
